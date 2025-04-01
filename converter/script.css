@@ -1,0 +1,163 @@
+/* Основной фон и шрифт */
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Контейнер конвертера с градиентным фоном */
+  .converter {
+    background: linear-gradient(135deg, #1f1f1f, #333333);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 350px;
+  }
+  
+  /* Заголовки с переливами */
+  h1, h2 {
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979, #9b00e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Анимация появления */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animated {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  /* Анимация ошибки (покачивание) */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s;
+  }
+  
+  /* Группы элементов */
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    width: 100px;
+    background: #1f1f1f;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  /* Кнопка обмена валют с эффектом перелива */
+  #swapButton {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    margin: 5px;
+  }
+  
+  #swapButton:hover {
+    transform: rotate(90deg) scale(1.1);
+  }
+  
+  /* Общие кнопки с градиентным эффектом */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #9b00e8, #ee0979);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #ee0979, #9b00e8);
+    transform: scale(1.05);
+  }
+  
+  /* Спиннер */
+  #spinner {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #ff9800;
+  }
+  
+  /* Скрытый элемент */
+  .hidden {
+    display: none;
+  }
+  
+  /* Результат и дата обновления */
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+  }
+  
+  #updateDate {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  /* История */
+  #historyList {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border-top: 1px solid #444;
+  }
+  
+  #historyList li {
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    animation: fadeInUp 0.5s ease-out;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin: 4px 0;
+  }
+  

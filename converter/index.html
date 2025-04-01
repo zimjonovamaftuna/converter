@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Конвертер валют</title>
+  <link rel="stylesheet" href="script.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="converter">
+    <h1>Конвертер валют</h1>
+    <div class="input-group">
+      <input type="number" id="amount" placeholder="Сумма" value="1">
+      <select id="fromCurrency"></select>
+      <button id="swapButton" title="Поменять валюты местами">&#8646;</button>
+      <select id="toCurrency"></select>
+    </div>
+    <button id="convertButton">Конвертировать</button>
+    <div id="spinner" class="hidden">Загрузка...</div>
+    <div id="result" class="animated"></div>
+    <div id="updateDate" class="animated"></div>
+    
+    <h2>История конвертаций</h2>
+    <ul id="historyList"></ul>
+    <button id="clearHistoryButton">Очистить историю</button>
+  </div>
+</body>
+</html>
